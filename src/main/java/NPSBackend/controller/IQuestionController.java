@@ -1,8 +1,7 @@
 package NPSBackend.controller;
 
 import NPSBackend.controller.dto.QuestionDTO.CreateQuestionDTO;
-import NPSBackend.entities.Question;
-import org.springframework.web.bind.annotation.RequestMapping;
+import NPSBackend.controller.dto.QuestionDTO.QuestionDTO;
 
 import java.util.List;
 
@@ -10,8 +9,8 @@ import java.util.List;
 public interface IQuestionController {
 
 
-    Question createQuestion(CreateQuestionDTO createQuestionDTO);
+    QuestionDTO createQuestion(CreateQuestionDTO createQuestionDTO);
 
-    List<Question> findAllQuestion();
+    List<QuestionDTO> findAllQuestion();
 
 }

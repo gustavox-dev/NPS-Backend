@@ -2,6 +2,7 @@ package NPSBackend.controller.Impl;
 
 import NPSBackend.controller.IQuestionController;
 import NPSBackend.controller.dto.QuestionDTO.CreateQuestionDTO;
+import NPSBackend.controller.dto.QuestionDTO.QuestionDTO;
 import NPSBackend.entities.Question;
 import NPSBackend.service.QuestionService;
 import lombok.AllArgsConstructor;
@@ -17,13 +18,13 @@ public class QuestionController implements IQuestionController {
 
     @Override
     @PostMapping
-    public Question createQuestion(@RequestBody CreateQuestionDTO createQuestionDTO) {
+    public QuestionDTO createQuestion(@RequestBody CreateQuestionDTO createQuestionDTO) {
         return service.createQuestion(createQuestionDTO);
     }
 
     @GetMapping(value = "/all")
     @Override
-    public List<Question> findAllQuestion() {
+    public List<QuestionDTO> findAllQuestion() {
         return service.findAllQuestion();
     }
 }

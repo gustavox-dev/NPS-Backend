@@ -22,5 +22,5 @@ public class Question {
 
     private String description;
 
-    private String userOpinion;
+
 }
