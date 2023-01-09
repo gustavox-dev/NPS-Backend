@@ -16,9 +16,9 @@ public class QuestionService {
 
     public Question createQuestion(CreateQuestionDTO createQuestionDTO){
         Question question = Question.builder()
-                .title(createQuestionDTO.title())
-                .description(createQuestionDTO.description())
-                .userOpinion(createQuestionDTO.userOpinion())
+                .title(createQuestionDTO.getTitle())
+                .description(createQuestionDTO.getDescription())
+                .userOpinion(createQuestionDTO.getUserOpinion())
                 .build();
 
         return repo.save(question);

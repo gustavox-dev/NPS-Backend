@@ -1,3 +1,11 @@
 package NPSBackend.controller.dto.QuestionDTO;
 
-public record CreateQuestionDTO(String title, String description, String userOpinion) {}
+import lombok.Data;
+
+@Data
+public class CreateQuestionDTO {
+    private String title;
+    private String description;
+    private String userOpinion;
+
+}
